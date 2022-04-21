@@ -4,7 +4,7 @@ import { Footer } from "src/components/Footer";
 import Main from "src/components/Main";
 import { Header } from "src/components/Header";
 import { useCallback } from "react";
-import { Links } from "src/components/Links";
+import Link from "next/link";
 
 // const handleClip = (e) => {
 //   console.log(e.target.href);
@@ -24,9 +24,9 @@ export default function Home() {
         <title>Index Page</title>
       </Head>
       <Header />
-      <Links href="/about">
+      <Link href="/about">
         <a onClick={handleClip}>ボタン</a>
-      </Links>
+      </Link>
       <Main page="index" />
       <Footer />
     </div>
