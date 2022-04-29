@@ -15,9 +15,9 @@ export const Comment = () => {
       <Head>
         <title>{data.name}</title>
       </Head>
-      <h1>{data.body}</h1>
+      <h1>{data.name}</h1>
       <ul>
-        <li>{data.name}</li>
+        <li>{data.body}</li>
         <li>{data.email}</li>
       </ul>
     </div>
