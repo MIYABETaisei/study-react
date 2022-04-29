@@ -22,6 +22,18 @@ export const usePosts = () => {
 export const useUsers = () => {
   return useFetchArray(`${API_URL}/users`);
 };
-export const useCommentsByPostsId = (id) => {
+export const useUserByCommentId = (id) => {
+  return useFetchArray(id ? `${API_URL}/users?id=${id}` : null);
+};
+export const useCommentsByPostId = (id) => {
   return useFetchArray(id ? `${API_URL}/comments?postId=${id}` : null);
+};
+export const useCommentsByUserId = (id) => {
+  return useFetchArray(id ? `${API_URL}/comments?userId=${id}` : null);
+};
+export const usePostsByUserId = (id) => {
+  return useFetchArray(id ? `${API_URL}/posts?userId=${id}` : null);
+};
+export const usePostsByCommentId = (id) => {
+  return useFetchArray(id ? `${API_URL}/posts?id=${id}` : null);
 };
