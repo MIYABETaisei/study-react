@@ -14,15 +14,17 @@ export const User = () => {
   return (
     <div>
       <Head>
-        <title>{user?.name}</title>
+        <title>{user.name}</title>
       </Head>
-      <h1>
-        {user?.id} {user?.name}
-      </h1>
-      <p>{`email: ${user?.email}`}</p>
-      <p>{`phone: ${user?.phone}`}</p>
-      <p>{`website: ${user?.website}`}</p>
-      <p>{`email: ${user?.email}`}</p>
+      <h1>{user.name}</h1>
+      <ul>
+        <li>{user.email}</li>
+        <li>{user.username}</li>
+        <li>{user.address.city}</li>
+        <li>{user.phone}</li>
+        <li>{user.website}</li>
+        <li>{user.company.name}</li>
+      </ul>
     </div>
   );
 };
