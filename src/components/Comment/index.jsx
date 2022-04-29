@@ -17,14 +17,12 @@ export const Comment = () => {
       <Head>
         <title>{data.name}</title>
       </Head>
-      <h1>{data.name}</h1>
-      <ul>
-        <li>{data.body}</li>
-        <li>{data.email}</li>
-      </ul>
-      <h2>コメントの作者</h2>
-      <UserByCommentId id={data.postId} />
-      <h2>元の記事</h2>
+      <div className="text-lg">
+        {data.name} ({data.email})
+      </div>
+      <h1 className="text-3xl font-bold">{data.name}</h1>
+      <h2 className="text-xl font-bold mt-10">元の記事</h2>
+      <div className="mt-2"></div>
       <PostsByCommentId id={data.postId} />
     </div>
   );

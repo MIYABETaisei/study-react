@@ -19,7 +19,7 @@ export const PostsByCommentId = (props) => {
         return (
           <li key={post.id}>
             <Link href={`/posts/${post.id}`}>
-              <a>{post.title}</a>
+              <a className="text-lg hover:text-blue-500">{post.title}</a>
             </Link>
           </li>
         );

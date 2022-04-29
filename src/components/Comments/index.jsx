@@ -14,12 +14,12 @@ export const Comments = () => {
     return <div>データは空です。</div>;
   }
   return (
-    <ul>
+    <ul className="space-y-2">
       {data.map((comment) => {
         return (
-          <li key={comment.id}>
+          <li key={comment.id} className="border-b pb-2">
             <Link href={`/comments/${comment.id}`}>
-              <a>{comment.name}</a>
+              <a className="block hover:text-blue-500">{comment.body}</a>
             </Link>
           </li>
         );
