@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { CommentsByPostId } from "src/components/Comments/CommentsByPostId";
+import { CommentsByPostId } from "src/components/Comment/CommentsByPostId";
 import { UserByUserId } from "src/components/User/UserByUserId";
 import { useRouter } from "next/router";
 import { usePost } from "src/hooks/usePost";
