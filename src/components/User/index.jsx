@@ -4,6 +4,7 @@ import { useUser } from "src/hooks/useUser";
 
 export const User = () => {
   const { user, error, isLoading } = useUser();
+  console.log(user);
 
   if (isLoading) {
     return <div>ローディング中</div>;
@@ -17,7 +18,7 @@ export const User = () => {
       <Head>
         <title>{user.name}</title>
       </Head>
-      <h1b className="font-bold text-3xl">{user.name}</h1b>
+      <h1 className="font-bold text-3xl">{user.name}</h1>
       <h2 className="text-xl font-bold mt-10">詳細</h2>
       <ul className="list-inside list-disc mt-2 text-xl">
         <li>メール：{user.email}</li>
