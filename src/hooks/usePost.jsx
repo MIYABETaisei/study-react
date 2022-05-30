@@ -9,7 +9,6 @@ export const usePost = () => {
       ? `https://jsonplaceholder.typicode.com/posts/${router.query.id}`
       : null
   );
-  console.log({ data, error });
   return {
     data,
     error,

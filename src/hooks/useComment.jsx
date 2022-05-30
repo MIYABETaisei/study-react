@@ -9,7 +9,6 @@ export const useComment = () => {
       ? `https://jsonplaceholder.typicode.com/comments/${router.query.id}`
       : null
   );
-  console.log({ data, error });
   return {
     data,
     error,

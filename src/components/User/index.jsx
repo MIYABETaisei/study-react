@@ -4,7 +4,6 @@ import { useUser } from "src/hooks/useUser";
 
 export const User = () => {
   const { user, error, isLoading } = useUser();
-  console.log(user);
 
   if (isLoading) {
     return <div>ローディング中</div>;

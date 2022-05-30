@@ -3,7 +3,6 @@ import { usePosts } from "src/hooks/useFetchArray";
 
 export const Posts = () => {
   const { data, error, isLoading, isEmpty } = usePosts();
-  console.log({ data, error });
 
   if (isLoading) {
     return <div>ローディング中</div>;

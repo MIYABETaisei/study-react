@@ -3,7 +3,6 @@ import { useComments } from "src/hooks/useFetchArray";
 
 export const Comments = () => {
   const { data, error, isLoading, isEmpty } = useComments();
-  console.log({ data, error });
   if (isLoading) {
     return <div>ローディング中</div>;
   }
