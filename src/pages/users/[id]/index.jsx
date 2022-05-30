@@ -1,12 +1,28 @@
 import { Header } from "src/components/Header";
 import { User } from "src/components/User";
+import { SWRConfig } from "swr";
 
-const UsersId = () => {
+export const getServerSideProps = async (ctx) => {
+  const { id } = ctx.query;
+  const API_URL = `https://jsonplaceholder.typicode.com/users/${id}`;
+  const res = await fetch(API_URL);
+  const user = await res.json();
+  return {
+    props: {
+      fallback: {
+        [API_URL]: user,
+      },
+    },
+  };
+};
+
+const UsersId = (props) => {
+  const { fallback } = props;
   return (
-    <div>
+    <SWRConfig value={{ fallback }}>
       <Header />
       <User />
-    </div>
+    </SWRConfig>
   );
 };
 
