@@ -7,8 +7,7 @@ export const usePost = () => {
   const { data, error } = useSWR(
     router.query.id
       ? `https://jsonplaceholder.typicode.com/posts/${router.query.id}`
-      : null,
-    fetcher
+      : null
   );
   console.log({ data, error });
   return {
