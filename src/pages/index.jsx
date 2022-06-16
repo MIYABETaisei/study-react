@@ -8,8 +8,8 @@ const About = () => {
         <title>Index Page</title>
       </Head>
       <Header />
-      <h1 className="text-3xl font-bold">Next.jsで学ぶReact講座</h1>
-      <p className="text-lg mt-4">JSONplaceholderのAPIを色々叩いてみるよ！</p>
+      <h1 className="text-3xl font-bold">Next.jsのSSR,SG,ISR実装</h1>
+      <p className="text-lg mt-4">JSONPlaceholderのAPIを使用</p>
     </div>
   );
 };
