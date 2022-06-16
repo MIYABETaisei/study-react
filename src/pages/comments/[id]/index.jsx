@@ -27,7 +27,7 @@ export const getStaticProps = async (ctx) => {
     },
   };
 };
-const commentsId = (props) => {
+const CommentsId = (props) => {
   const { fallback } = props;
   const router = useRouter();
   if (router.isFallback) {
@@ -43,4 +43,4 @@ const commentsId = (props) => {
   );
 };
 
-export default commentsId;
+export default CommentsId;

@@ -1,6 +1,6 @@
 import Head from "next/head";
-const { Header } = require("src/components/Header");
 import { Comments as CommentsComponent } from "src/components/Comments";
+import { Header } from "src/components/Header";
 import { SWRConfig } from "swr";
 
 export const getStaticProps = async () => {
